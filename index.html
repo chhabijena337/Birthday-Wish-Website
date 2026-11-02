@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Magic | A Special Surprise</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+          rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div id="floatingElements"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg birthday-nav">
+        <div class="container">
+
+            <a class="navbar-brand logo" href="#home">
+                <i class="bi bi-balloon-heart-fill"></i>
+                Birthday<span>Magic</span>
+            </a>
+
+            <a href="#memories" class="nav-memory-btn">
+                <i class="bi bi-images"></i> Memories
+            </a>
+
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+
+        <div class="container">
+
+            <div class="row align-items-center gy-5">
+
+                <!-- LEFT CONTENT -->
+                <div class="col-lg-6">
+
+                    <div class="hero-badge">
+                        <i class="bi bi-stars"></i>
+                        TODAY IS YOUR SPECIAL DAY
+                    </div>
+
+                    <h1 class="hero-title">
+                        Happy Birthday
+                        <span id="heroName">My Favourite Person!</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        A beautiful soul deserves a beautiful celebration.
+                        Today, we celebrate your smile, your kindness,
+                        and every wonderful memory that makes you special.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <button class="btn-birthday" id="surpriseButton">
+                            <i class="bi bi-gift-fill"></i>
+                            Open Your Surprise
+                        </button>
+
+                        <a href="#memories" class="btn-outline-birthday">
+                            <i class="bi bi-camera-fill"></i>
+                            Explore Memories
+                        </a>
+
+                    </div>
+
+                    <div class="hero-stats">
+
+                        <div>
+                            <span>💖</span>
+                            <p>Endless Love</p>
+                        </div>
+
+                        <div>
+                            <span>🎉</span>
+                            <p>Happy Moments</p>
+                        </div>
+
+                        <div>
+                            <span>✨</span>
+                            <p>Beautiful Memories</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT HERO PHOTO -->
+                <div class="col-lg-6">
+
+                    <div class="hero-photo-area">
+
+                        <div class="hero-orbit orbit-one"></div>
+                        <div class="hero-orbit orbit-two"></div>
+
+                        <div class="floating-sticker sticker-one">🎂</div>
+                        <div class="floating-sticker sticker-two">💖</div>
+                        <div class="floating-sticker sticker-three">🎈</div>
+
+                        <div class="hero-photo-card">
+
+                            <!-- PHOTO 1: MAIN BIRTHDAY PHOTO -->
+                            <img
+                                src="images/birthday-person.jpg"
+                                alt="Birthday person"
+                                class="hero-photo"
+                                id="heroPhoto">
+
+                            <div class="hero-photo-caption">
+                                <span>🌷 THE DAY IS ALL YOURS</span>
+                                <h3 id="photoName">A Star Was Born!</h3>
+                                <p>Keep smiling, keep shining ✨</p>
+                            </div>
+
+                        </div>
+
+                        <div class="floating-note">
+                            <span>💌</span>
+                            Made with love
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- BIRTHDAY MESSAGE STRIP -->
+    <section class="birthday-strip">
+        <div class="container">
+            <p>
+                🎉 MORE LOVE &nbsp; ✨ MORE LAUGHTER &nbsp;
+                💕 MORE BEAUTIFUL MEMORIES &nbsp; 🎂 MORE HAPPINESS
+            </p>
+        </div>
+    </section>
+
+    <!-- MEMORIES SECTION -->
+    <section class="memories-section" id="memories">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">OUR LITTLE WORLD 💕</span>
+
+                <h2>Memories That Make Us Smile</h2>
+
+                <p>
+                    Every picture tells a story. Every memory holds a feeling.
+                    Here are some beautiful moments worth celebrating.
+                </p>
+
+            </div>
+
+            <div class="row g-4" id="memoryGallery">
+
+                <!-- PHOTO 2: CHILDHOOD -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="memory-card">
+
+                        <div class="memory-image">
+                            <img
+                                src="images/childhood.jpg"
+                                alt="Childhood memories"
+                                loading="lazy">
+
+                            <span class="memory-number">01</span>
+                        </div>
+
+                        <div class="memory-content">
+                            <span class="memory-category">SWEET BEGINNINGS</span>
+                            <h3>Little Moments</h3>
+                            <p>Every beautiful journey starts with little memories. 🌸</p>
+                        </div>
+
+                    </article>
+                </div>
+
+                <!-- PHOTO 3: FRIENDSHIP -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="memory-card">
+
+                        <div class="memory-image">
+                            <img
+                                src="images/best-friends.jpg"
+                                alt="Best friends"
+                                loading="lazy">
+
+                            <span class="memory-number">02</span>
+                        </div>
+
+                        <div class="memory-content">
+                            <span class="memory-category">FRIENDSHIP</span>
+                            <h3>Partners in Happiness</h3>
+                            <p>The best memories become even better when shared. 💗</p>
+                        </div>
+
+                    </article>
+                </div>
+
+                <!-- PHOTO 4: FAVOURITE MEMORY -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="memory-card">
+
+                        <div class="memory-image">
+                            <img
+                                src="images/favourite-memory.jpg"
+                                alt="Favourite memory"
+                                loading="lazy">
+
+                            <span class="memory-number">03</span>
+                        </div>
+
+                        <div class="memory-content">
+                            <span class="memory-category">FAVOURITE MEMORY</span>
+                            <h3>A Moment to Remember</h3>
+                            <p>Some moments stay in our hearts forever. ✨</p>
+                        </div>
+
+                    </article>
+                </div>
+
+                <!-- PHOTO 5: BIRTHDAY PARTY -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="memory-card">
+
+                        <div class="memory-image">
+                            <img
+                                src="images/birthday-party.jpg"
+                                alt="Birthday celebration"
+                                loading="lazy">
+
+                            <span class="memory-number">04</span>
+                        </div>
+
+                        <div class="memory-content">
+                            <span class="memory-category">CELEBRATION</span>
+                            <h3>Let the Party Begin!</h3>
+                            <p>More candles, more wishes, and more reasons to smile. 🎂</p>
+                        </div>
+
+                    </article>
+                </div>
+
+                <!-- PHOTO 6: FAMILY -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="memory-card">
+
+                        <div class="memory-image">
+                            <img
+                                src="images/family.jpg"
+                                alt="Family memories"
+                                loading="lazy">
+
+                            <span class="memory-number">05</span>
+                        </div>
+
+                        <div class="memory-content">
+                            <span class="memory-category">FAMILY LOVE</span>
+                            <h3>Love That Lasts</h3>
+                            <p>Family makes every celebration feel special. 💕</p>
+                        </div>
+
+                    </article>
+                </div>
+
+                <!-- PHOTO 7: SPECIAL MOMENT -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="memory-card">
+
+                        <div class="memory-image">
+                            <img
+                                src="images/special-moment.jpg"
+                                alt="Special moments"
+                                loading="lazy">
+
+                            <span class="memory-number">06</span>
+                        </div>
+
+                        <div class="memory-content">
+                            <span class="memory-category">FOREVER SPECIAL</span>
+                            <h3>One of a Kind</h3>
+                            <p>The world is brighter because you are in it. 🌈</p>
+                        </div>
+
+                    </article>
+                </div>
+
+            </div>
+
+            <p class="gallery-note">
+                <i class="bi bi-heart-fill"></i>
+                Replace these sample photo filenames with your own memories.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- PERSONAL BIRTHDAY WISH -->
+    <section class="wish-section" id="birthdayWish">
+
+        <div class="container">
+
+            <div class="wish-card">
+
+                <div class="wish-decoration decoration-left">🌸</div>
+                <div class="wish-decoration decoration-right">✨</div>
+
+                <div class="wish-icon">💌</div>
+
+                <span class="section-label">A MESSAGE FROM THE HEART</span>
+
+                <h2>To Someone Truly Special</h2>
+
+                <p id="birthdayMessage">
+                    May your birthday bring you a thousand reasons to smile,
+                    a heart full of happiness, and dreams that turn into reality.
+                    May this new chapter of your life be the most beautiful one yet.
+                    You deserve all the love and joy in the world! 💖
+                </p>
+
+                <div class="wish-signature">
+                    With lots of love, always 💕
+                </div>
+
+                <button class="btn-birthday" id="celebrateButton">
+                    <i class="bi bi-balloon-heart-fill"></i>
+                    Celebrate This Day
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PHOTO SELECTION SECTION -->
+    <section class="personalize-section" id="personalize">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">MAKE IT YOUR OWN</span>
+
+                <h2>Personalize the Birthday Surprise</h2>
+
+                <p>
+                    Choose your favourite photo, enter a name,
+                    and write a birthday message.
+                </p>
+
+            </div>
+
+            <div class="personalize-card">
+
+                <div class="row g-4">
+
+                    <div class="col-md-6">
+
+                        <label for="nameInput" class="form-label">
+                            Birthday Person's Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nameInput"
+                            class="form-control"
+                            placeholder="Enter their name">
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <label for="mainPhotoInput" class="form-label">
+                            Choose Main Birthday Photo
+                        </label>
+
+                        <input
+                            type="file"
+                            id="mainPhotoInput"
+                            class="form-control"
+                            accept="image/*">
+
+                    </div>
+
+                    <div class="col-12">
+
+                        <label for="messageInput" class="form-label">
+                            Your Birthday Message
+                        </label>
+
+                        <textarea
+                            id="messageInput"
+                            class="form-control"
+                            rows="4"
+                            placeholder="Write a lovely birthday message..."></textarea>
+
+                    </div>
+
+                    <div class="col-12">
+
+                        <label for="galleryInput" class="form-label">
+                            Add More Memory Photos
+                        </label>
+
+                        <input
+                            type="file"
+                            id="galleryInput"
+                            class="form-control"
+                            accept="image/*"
+                            multiple>
+
+                        <small class="text-muted">
+                            You can choose several photos at once.
+                            Selected photos will be added to the gallery above.
+                        </small>
+
+                    </div>
+
+                    <div class="col-12">
+
+                        <label for="musicInput" class="form-label">
+                            Optional Birthday Music
+                        </label>
+
+                        <input
+                            type="file"
+                            id="musicInput"
+                            class="form-control"
+                            accept="audio/*">
+
+                        <audio id="birthdayMusic" loop></audio>
+
+                        <button type="button" id="musicButton" class="music-control">
+                            <i class="bi bi-music-note-beamed"></i>
+                            Play / Pause Music
+                        </button>
+
+                    </div>
+
+                    <div class="col-12 text-center">
+
+                        <button class="btn-birthday" id="applyButton">
+                            <i class="bi bi-magic"></i>
+                            Apply My Changes
+                        </button>
+
+                        <p id="formMessage" class="form-message"></p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="birthday-footer">
+
+        <div class="container text-center">
+
+            <div class="footer-heart">💖</div>
+
+            <h3>Made with Love</h3>
+
+            <p>A special birthday. A beautiful soul. Memories forever.</p>
+
+            <span>Happy Birthday! 🎂</span>
+
+        </div>
+
+    </footer>
+
+    <!-- SURPRISE POPUP -->
+    <div class="surprise-modal" id="surpriseModal" aria-hidden="true">
+
+        <div class="surprise-box" role="dialog" aria-modal="true"
+             aria-labelledby="surpriseTitle">
+
+            <button class="modal-close" id="closeModal"
+                    aria-label="Close surprise">
+                <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="surprise-emoji">🎂🎉🎁</div>
+
+            <h2 id="surpriseTitle">Happy Birthday!</h2>
+
+            <h3 id="surpriseName">My Favourite Person!</h3>
+
+            <p id="surpriseText">
+                May your special day be filled with laughter,
+                beautiful surprises, and unforgettable memories! 💖
+            </p>
+
+            <button class="btn-birthday" id="confettiButton">
+                <i class="bi bi-stars"></i>
+                More Confetti!
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Your JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

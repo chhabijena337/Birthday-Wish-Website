@@ -1,0 +1,980 @@
+/* ===================================
+   BIRTHDAY MAGIC - PREMIUM DESIGN
+=================================== */
+
+:root {
+    --pink: #ff4d91;
+    --purple: #a855f7;
+    --dark: #352044;
+    --muted: #81738c;
+    --light-pink: #fff0f7;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--dark);
+    background: #fff9fc;
+    overflow-x: hidden;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAVBAR */
+
+.birthday-nav {
+    padding: 20px 0;
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid #ffe1ee;
+    backdrop-filter: blur(15px);
+}
+
+.logo {
+    color: var(--pink);
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: var(--purple);
+}
+
+.nav-memory-btn {
+    padding: 11px 20px;
+    border: 1px solid #ffd2e5;
+    border-radius: 30px;
+    color: var(--pink);
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-memory-btn:hover {
+    color: white;
+    background: var(--pink);
+}
+
+/* HERO */
+
+.hero-section {
+    position: relative;
+    padding: 90px 0 110px;
+    background:
+        radial-gradient(circle at 10% 20%, #ffe3ef 0, transparent 30%),
+        radial-gradient(circle at 90% 60%, #eee1ff 0, transparent 35%),
+        linear-gradient(135deg, #fffafd, #fff3f8);
+    overflow: hidden;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 12px 18px;
+    border: 1px solid #ffd1e4;
+    border-radius: 30px;
+    background: white;
+    color: #d43b82;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.hero-title {
+    margin-top: 27px;
+    font-size: clamp(42px, 5.5vw, 70px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -2px;
+}
+
+.hero-title span {
+    display: block;
+    margin-top: 12px;
+    color: var(--pink);
+    font-family: "Pacifico", cursive;
+    font-size: clamp(34px, 4.3vw, 53px);
+    font-weight: 400;
+    letter-spacing: 0;
+    overflow-wrap: anywhere;
+}
+
+.hero-description {
+    max-width: 550px;
+    margin: 25px 0 30px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+/* BUTTONS */
+
+.btn-birthday,
+.btn-outline-birthday {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 15px 22px;
+    border-radius: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-birthday {
+    border: none;
+    color: white;
+    background: linear-gradient(135deg, #ff4d91, #e83e9c);
+    box-shadow: 0 12px 25px #ff4d9133;
+}
+
+.btn-birthday:hover {
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px #ff4d9150;
+}
+
+.btn-outline-birthday {
+    border: 1px solid #f4c7dc;
+    background: white;
+    color: #bf3d7c;
+}
+
+.btn-outline-birthday:hover {
+    color: var(--pink);
+    background: #fff0f7;
+    transform: translateY(-3px);
+}
+
+/* HERO STATS */
+
+.hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin-top: 38px;
+}
+
+.hero-stats div {
+    text-align: center;
+}
+
+.hero-stats span {
+    font-size: 23px;
+}
+
+.hero-stats p {
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 600;
+}
+
+/* HERO IMAGE */
+
+.hero-photo-area {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 520px;
+}
+
+.hero-orbit {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border: 1px dashed #f5a7ce;
+    border-radius: 50%;
+    animation: rotateOrbit 25s linear infinite;
+}
+
+.orbit-two {
+    width: 460px;
+    height: 460px;
+    border-color: #d8b4fe;
+    animation-direction: reverse;
+    animation-duration: 35s;
+}
+
+.hero-photo-card {
+    position: relative;
+    z-index: 2;
+    width: min(340px, 78%);
+    padding: 12px;
+    border: 1px solid white;
+    border-radius: 180px 180px 28px 28px;
+    background: white;
+    box-shadow: 0 30px 80px #b64c9026;
+    transform: rotate(-3deg);
+    animation: photoFloat 5s ease-in-out infinite;
+}
+
+.hero-photo {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 170px 170px 20px 20px;
+    background: #ffe4ef;
+}
+
+.hero-photo-caption {
+    padding: 20px 8px 13px;
+    text-align: center;
+}
+
+.hero-photo-caption > span {
+    color: var(--pink);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hero-photo-caption h3 {
+    margin: 9px 0;
+    font-family: "Pacifico", cursive;
+    font-size: 25px;
+    overflow-wrap: anywhere;
+}
+
+.hero-photo-caption p {
+    margin-bottom: 0;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.floating-sticker {
+    position: absolute;
+    z-index: 3;
+    display: grid;
+    place-items: center;
+    width: 65px;
+    height: 65px;
+    border: 1px solid #ffffffc9;
+    border-radius: 50%;
+    background: #ffffffdf;
+    box-shadow: 0 12px 35px #8c51821c;
+    font-size: 30px;
+    animation: stickerFloat 3s ease-in-out infinite;
+}
+
+.sticker-one {
+    top: 45px;
+    left: 5%;
+}
+
+.sticker-two {
+    top: 40%;
+    right: 0;
+    animation-delay: 0.7s;
+}
+
+.sticker-three {
+    bottom: 35px;
+    left: 8%;
+    animation-delay: 1.3s;
+}
+
+.floating-note {
+    position: absolute;
+    z-index: 4;
+    right: -2px;
+    bottom: 65px;
+    padding: 14px 17px;
+    border: 1px solid white;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 12px 35px #8c51821c;
+    color: #8d4c80;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.floating-note span {
+    margin-right: 7px;
+    font-size: 20px;
+}
+
+/* STRIP */
+
+.birthday-strip {
+    padding: 21px 10px;
+    background: linear-gradient(100deg, #ff4d91, #b45cf5);
+    color: white;
+    text-align: center;
+}
+
+.birthday-strip p {
+    margin: 0;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 2;
+}
+
+/* SECTION HEADINGS */
+
+.memories-section,
+.personalize-section {
+    padding: 100px 0;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.section-label {
+    color: var(--pink);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section-heading h2,
+.wish-card h2 {
+    margin-top: 15px;
+    font-size: clamp(28px, 4vw, 43px);
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.section-heading p {
+    margin-top: 17px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* MEMORY CARDS */
+
+.memories-section {
+    background: white;
+}
+
+.memory-card {
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid #f5e7ef;
+    border-radius: 22px;
+    background: white;
+    box-shadow: 0 10px 35px #6e366c0a;
+    transition: transform 0.35s, box-shadow 0.35s;
+}
+
+.memory-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 25px 55px #6e366c18;
+}
+
+.memory-image {
+    position: relative;
+    height: 270px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffe4ef, #eee1ff);
+}
+
+.memory-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s;
+}
+
+.memory-card:hover .memory-image img {
+    transform: scale(1.08);
+}
+
+.memory-number {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #ffffffa8;
+    border-radius: 50%;
+    background: #ffffffdf;
+    color: var(--pink);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.memory-content {
+    padding: 23px;
+}
+
+.memory-category {
+    color: var(--pink);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.memory-content h3 {
+    margin: 10px 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.memory-content p {
+    margin-bottom: 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.gallery-note {
+    margin-top: 35px;
+    color: #a68ca5;
+    font-size: 11px;
+    text-align: center;
+}
+
+.gallery-note i {
+    color: var(--pink);
+}
+
+/* BIRTHDAY WISH */
+
+.wish-section {
+    padding: 100px 0;
+    background:
+        radial-gradient(circle at 0% 0%, #ffe1ed, transparent 40%),
+        radial-gradient(circle at 100% 100%, #eaddff, transparent 40%),
+        #fff7fb;
+}
+
+.wish-card {
+    position: relative;
+    max-width: 850px;
+    margin: auto;
+    padding: 65px 45px;
+    overflow: hidden;
+    border: 1px solid white;
+    border-radius: 30px;
+    background: #ffffffc9;
+    box-shadow: 0 25px 70px #a0548a12;
+    text-align: center;
+    backdrop-filter: blur(15px);
+}
+
+.wish-icon {
+    margin-bottom: 20px;
+    font-size: 48px;
+    animation: heartBeat 2s infinite;
+}
+
+.wish-card h2 {
+    margin-bottom: 25px;
+}
+
+.wish-card > p {
+    max-width: 620px;
+    margin: 0 auto 25px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2.1;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.wish-signature {
+    margin-bottom: 30px;
+    color: var(--pink);
+    font-family: "Pacifico", cursive;
+    font-size: 20px;
+}
+
+.wish-decoration {
+    position: absolute;
+    font-size: 60px;
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+.decoration-left {
+    top: 20px;
+    left: 20px;
+}
+
+.decoration-right {
+    right: 20px;
+    bottom: 20px;
+}
+
+/* PERSONALIZE */
+
+.personalize-section {
+    background: white;
+}
+
+.personalize-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 38px;
+    border: 1px solid #f7e5ef;
+    border-radius: 25px;
+    background: #fffafd;
+    box-shadow: 0 20px 55px #7c386d0d;
+}
+
+.personalize-card .form-label {
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.personalize-card .form-control {
+    padding: 13px 14px;
+    border: 1px solid #f1dbe8;
+    border-radius: 12px;
+    background: white;
+    font-size: 12px;
+}
+
+.personalize-card .form-control:focus {
+    border-color: var(--pink);
+    box-shadow: 0 0 0 4px #ff4d9118;
+}
+
+.personalize-card textarea {
+    resize: vertical;
+}
+
+.personalize-card small {
+    display: block;
+    margin-top: 9px;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.music-control {
+    margin-top: 12px;
+    padding: 10px 14px;
+    border: 1px solid #f1c5dd;
+    border-radius: 10px;
+    background: white;
+    color: #c13e80;
+    font-size: 11px;
+}
+
+.form-message {
+    min-height: 20px;
+    margin-top: 16px;
+    color: #bd3c7b;
+    font-size: 12px;
+}
+
+/* FOOTER */
+
+.birthday-footer {
+    padding: 45px 0;
+    background: #fff4f9;
+    border-top: 1px solid #ffe0ec;
+}
+
+.footer-heart {
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.birthday-footer h3 {
+    font-family: "Pacifico", cursive;
+    color: var(--pink);
+    font-size: 24px;
+}
+
+.birthday-footer p {
+    margin: 12px 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.birthday-footer span {
+    color: #a18aa6;
+    font-size: 11px;
+}
+
+/* SURPRISE POPUP */
+
+.surprise-modal {
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #26152dc9;
+    backdrop-filter: blur(8px);
+}
+
+.surprise-modal.show {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+.surprise-box {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    padding: 45px 30px;
+    border: 1px solid white;
+    border-radius: 28px;
+    background: linear-gradient(135deg, #fffafd, #f6edff);
+    box-shadow: 0 30px 100px #00000030;
+    text-align: center;
+    animation: popupIn 0.4s ease;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: #ffe4ef;
+    color: var(--pink);
+}
+
+.surprise-emoji {
+    margin-bottom: 20px;
+    font-size: 48px;
+}
+
+.surprise-box h2 {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.surprise-box h3 {
+    margin: 12px 0;
+    color: var(--pink);
+    font-family: "Pacifico", cursive;
+    font-size: 29px;
+    overflow-wrap: anywhere;
+}
+
+.surprise-box p {
+    margin: 20px 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 2;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+/* FLOATING HEARTS */
+
+#floatingElements {
+    position: fixed;
+    z-index: 0;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.float-item {
+    position: absolute;
+    bottom: -60px;
+    animation: floatUp linear forwards;
+    opacity: 0.55;
+}
+
+.hero-section,
+.birthday-strip,
+.memories-section,
+.wish-section,
+.personalize-section,
+.birthday-footer,
+.birthday-nav {
+    position: relative;
+    z-index: 1;
+}
+
+/* CONFETTI */
+
+#confettiCanvas {
+    position: fixed;
+    z-index: 2000;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* ANIMATIONS */
+
+@keyframes photoFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(1deg);
+    }
+}
+
+@keyframes stickerFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(8deg);
+    }
+}
+
+@keyframes rotateOrbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes heartBeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0) rotate(0);
+    }
+
+    to {
+        transform: translateY(-120vh) rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popupIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+    .hero-section {
+        padding: 65px 0 80px;
+    }
+
+    .hero-photo-area {
+        min-height: 480px;
+    }
+
+    .hero-orbit {
+        width: 340px;
+        height: 340px;
+    }
+
+    .orbit-two {
+        width: 390px;
+        height: 390px;
+    }
+
+    .hero-photo {
+        height: 310px;
+    }
+
+    .memories-section,
+    .wish-section,
+    .personalize-section {
+        padding: 70px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-memory-btn {
+        padding: 9px 12px;
+        font-size: 11px;
+    }
+
+    .hero-section {
+        padding: 45px 0;
+    }
+
+    .hero-title {
+        font-size: 43px;
+        letter-spacing: -1px;
+    }
+
+    .hero-title span {
+        font-size: 34px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .btn-birthday,
+    .btn-outline-birthday {
+        width: 100%;
+    }
+
+    .hero-stats {
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .hero-stats p {
+        font-size: 9px;
+    }
+
+    .hero-photo-area {
+        min-height: 420px;
+    }
+
+    .hero-photo-card {
+        width: min(290px, 78%);
+    }
+
+    .hero-photo {
+        height: 285px;
+    }
+
+    .hero-orbit {
+        width: 290px;
+        height: 290px;
+    }
+
+    .orbit-two {
+        width: 330px;
+        height: 330px;
+    }
+
+    .floating-sticker {
+        width: 48px;
+        height: 48px;
+        font-size: 23px;
+    }
+
+    .sticker-two {
+        right: 0;
+    }
+
+    .floating-note {
+        right: 0;
+        bottom: 30px;
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    .birthday-strip p {
+        font-size: 9px;
+    }
+
+    .memories-section,
+    .wish-section,
+    .personalize-section {
+        padding: 60px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .memory-image {
+        height: 250px;
+    }
+
+    .wish-card {
+        padding: 45px 20px;
+    }
+
+    .wish-card > p {
+        font-size: 12px;
+    }
+
+    .wish-decoration {
+        font-size: 35px;
+    }
+
+    .personalize-card {
+        padding: 23px 17px;
+    }
+
+    .surprise-box {
+        padding: 40px 20px;
+    }
+
+    .surprise-box h2 {
+        font-size: 26px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
